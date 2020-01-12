@@ -21,7 +21,6 @@ export class GameControlComponent implements OnInit {
       this.startGame.emit(this.number + 1);
       this.number++;
     }, 1000);
-    
     console.log("Start");
   }
 

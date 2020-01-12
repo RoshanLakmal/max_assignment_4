@@ -7,11 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  numsArrayOdd = [];
+  numsArrayEven = [];
+  finish = false;
+
   onStartGame(startNumber: number){
+    this.finish = false;
+    if(startNumber%2===0){
+      this.numsArrayEven.push(startNumber);
+    }else{
+      this.numsArrayOdd.push(startNumber);
+    }
+    
     console.log(startNumber);
   }
 
-  onStopGame(myNumber:{startNumber: number}){
-    console.log(myNumber.startNumber);
+  onStopGame(startNumber: number){
+    this.finish = true;
+    console.log(startNumber);
   }
 }

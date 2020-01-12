@@ -17,3 +17,9 @@
 </div>
 <app-game-control (btnStart)="onStartGame($event)"
 (btnSop)="onStopGame($event)"></app-game-control>
+<ng-container *ngIf="finish == true">
+  <app-odd *ngFor="let oddElement of numsArrayOdd"
+  [oddEl]="oddElement"></app-odd>
+  <app-even *ngFor="let evenElement of numsArrayEven"
+  [evenEl]="evenElement"></app-even>
+</ng-container>
