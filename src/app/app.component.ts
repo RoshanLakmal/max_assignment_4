@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  onStartGame(startNumber: number){
+    console.log(startNumber);
+  }
+
+  onStopGame(myNumber:{startNumber: number}){
+    console.log(myNumber.startNumber);
+  }
 }
